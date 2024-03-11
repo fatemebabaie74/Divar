@@ -14,9 +14,9 @@ content:"",
 amount:null,
 city:"",
 category:"",
-images:null
+images:null,
 
-  })
+  });
 
 
     const { data} = useQuery(["get-categories"] , getCategory )
@@ -29,7 +29,7 @@ const changeHandler =(event)=>{
   setForm({...form ,[name] : event.target.value });
  }
   else{
-setForm({...form ,[name] : event.target.files})
+setForm({...form ,[name] : event.target.files[0]})
   
   }
 
